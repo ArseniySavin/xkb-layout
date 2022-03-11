@@ -1,1 +1,1 @@
-# xkb-layout
+$HOME/.config/xkb

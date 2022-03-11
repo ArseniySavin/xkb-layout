@@ -1,0 +1,74 @@
+xkb_keymap {
+	xkb_keycodes  { include "evdev+aliases(qwerty)"	};
+	xkb_types     { include "complete"	};
+	xkb_compat    { include "complete"	};
+	xkb_geometry  { include "pc(pc105)"	};
+
+	xkb_symbols "my_layout"  { 
+    include "pc+us+ru:2+inet(evdev)"
+	include "capslock(grouplock)"
+	//include "group(win_space_toggle)"
+	//include "level3(caps_switch)"
+
+
+
+  	key <RALT> {
+        [ ISO_Next_Group ]
+    };
+
+	key <SPCE> { 
+		symbols=[ ISO_Level3_Shift, space] 
+	};
+
+	key <AD03> { 
+		[  e, E, Return, Return ]  
+	};
+	
+	key <DELE> { 
+		[Delete, Delete, BackSpace, BackSpace] 
+	};
+	
+	key <BKSP> { 
+		[BackSpace, BackSpace, Delete, Delete] 
+	};
+	
+	key <TAB> { 
+		[ Tab, Tab, BackSpace, BackSpace ] 
+	};
+
+	key <AD01> { 
+		[ q, 				Q,					Delete, 			Delete ], 
+		[ Cyrillic_shorti,	Cyrillic_SHORTI,	Delete, 			Delete ]
+	};
+	key <AD02> { 
+		[ w, 			W, 				Up, Up ], 
+		[ Cyrillic_tse, Cyrillic_TSE, 	Up, Up  ] 
+	};
+    key <AC01> { 
+		[ a, 			A, 				Left, Left ],	
+		[ Cyrillic_ef, 	Cyrillic_EF, 	Left, Left ] 
+	};
+    key <AC02> { 
+		[ s, 				S, 				Down, Down ],	
+		[ Cyrillic_yeru, 	Cyrillic_YERU, 	Down, Down ] 
+	};
+    key <AC03> { 
+		[ d, 			D, 				Right, Right ], 
+		[ Cyrillic_ve, 	Cyrillic_VE, 	Right, Right ] 
+	};
+
+	key <RGHT> { 
+		[ Right, Right, End, End ] 
+	};
+	key <LEFT> { 
+		[ Left, Left, Home, Home ] 
+	};
+	key <UP> { 
+		[ Up, Up, Prior, Prior ] 
+	};
+	key <DOWN> { 
+		[ PGUP, Down, Next, Next ] 
+	};
+    };
+
+};
